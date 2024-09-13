@@ -1,0 +1,179 @@
+{
+	"type": "FeatureCollection",
+	"crs": {
+		"type": "name",
+		"properties": {
+			"name": "EPSG:3857"
+		}
+	},
+	"features": [
+		{
+			"type": "Feature",
+			"id": "Input",
+			"geometry": {
+				"type": "Polygon",
+				"coordinates": [
+					[
+						[ 100, 0 ],
+						[ 150, 0 ],
+						[ 150, 50 ],
+						[ 100, 50 ],
+						[ 100, 0 ]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Polygon",
+				"coordinates": [
+					[
+						[ 100, 5 ],
+						[ 100, 50 ],
+						[ 130, 50 ],
+						[ 120, 0 ],
+						[ 110, 30 ],
+						[ 100, 5 ]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": "Output",
+			"geometry": {
+				"type": "Polygon",
+				"coordinates": [
+					[
+						[ 130, 50 ],
+						[ 150, 50 ],
+						[ 150, 40 ],
+						[ 130, 50 ]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Polygon",
+				"coordinates": [
+					[
+						[ 100, 0 ],
+						[ 100, 5 ],
+						[ 110, 30 ],
+						[ 120, 0 ],
+						[ 100, 0 ]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": "Output",
+			"geometry": {
+				"type": "Polygon",
+				"coordinates": [
+					[
+						[ 120, 0 ],
+						[ 130, 50 ],
+						[ 150, 40 ],
+						[ 150, 0 ],
+						[ 120, 0 ]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": "Input",
+			"geometry": {
+				"type": "LineString",
+				"coordinates": [
+					[ 100, 5 ],
+					[ 110, 30 ],
+					[ 120, 0 ],
+					[ 130, 50 ],
+					[ 150, 40 ]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[ 130, 50 ],
+							[ 150, 50 ],
+							[ 150, 40 ],
+							[ 130, 50 ]
+						]
+					],
+					[
+						[
+							[ 120, 0 ],
+							[ 130, 50 ],
+							[ 150, 40 ],
+							[ 150, 0 ],
+							[ 120, 0 ]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+					[
+						[
+							[ 100, 5 ],
+							[ 100, 50 ],
+							[ 130, 50 ],
+							[ 120, 0 ],
+							[ 110, 30 ],
+							[ 100, 5 ]
+						]
+					],
+					[
+						[
+							[ 130, 50 ],
+							[ 150, 50 ],
+							[ 150, 40 ],
+							[ 130, 50 ]
+						]
+					],
+					[
+						[
+							[ 120, 0 ],
+							[ 130, 50 ],
+							[ 150, 40 ],
+							[ 150, 0 ],
+							[ 120, 0 ]
+						]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "MultiPolygon",
+				"coordinates": [
+				]
+			}
+		}
+	]
+}

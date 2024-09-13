@@ -1,0 +1,44 @@
+File Polygon_SimpleLineString_Cut
+Units Meters
+
+Polygon
+	name: "Input_Polygon"
+Ring
+Point X: 100, Y: 0 End Point
+Point X: 101, Y: 0 End Point
+Point X: 101, Y: 1 End Point
+Point X: 100, Y: 1 End Point
+Point X: 100, Y: 0 End Point
+End Ring
+End Polygon
+
+
+Polygon
+	name: "Ouput_Polygon0"
+Ring
+Point X: 101, Y: 0.5 End Point
+Point X: 101, Y: 1   End Point
+Point X: 100, Y: 1   End Point
+Point X: 100, Y: 0.5 End Point
+Point X: 101, Y: 0.5 End Point
+End Ring
+End Polygon
+
+
+Polygon
+	name: "Output_Polygon1"
+Ring
+Point X: 100, Y: 0.5 End Point
+Point X: 100, Y: 0   End Point
+Point X: 101, Y: 0   End Point
+Point X: 101, Y: 0.5 End Point
+Point X: 100, Y: 0.5 End Point
+End Ring
+End Polygon
+
+Polyline
+	name: "Input LineString"
+Point X: 100, Y: 0.5 End Point
+Point X: 101, Y: 0.5 End Point
+End Polyline
+

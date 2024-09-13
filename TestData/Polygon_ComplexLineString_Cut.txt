@@ -1,0 +1,70 @@
+File Polygon_ComplexLineString_Cut
+Units Meters
+
+Multipolygon
+	name: "Input_Polygon"
+Polygon
+Ring
+Point X: 100, Y: 0 End Point
+Point X: 150, Y: 0 End Point
+Point X: 150, Y: 50 End Point
+Point X: 100, Y: 50 End Point
+Point X: 100, Y: 0 End Point
+End Ring
+End Polygon
+End Multipolygon
+
+
+Polygon
+	name: "Output_Polygon1"
+Ring
+Point X: 100, Y: 5 End Point
+Point X: 100, Y: 50 End Point
+Point X: 130, Y: 50 End Point
+Point X: 120, Y: 0 End Point
+Point X: 110, Y: 30 End Point
+Point X: 100, Y: 5 End Point
+End Ring
+End Polygon
+
+Polygon
+	name: "Output_Polygon2"
+Ring
+Point X: 130, Y: 50 End Point
+Point X: 150, Y: 50 End Point
+Point X: 150, Y: 40 End Point
+Point X: 130, Y: 50 End Point
+End Ring
+End Polygon
+
+Polygon
+name: "Output_Polygon3"
+Ring
+Point X: 100, Y: 0 End Point
+Point X: 100, Y: 5 End Point
+Point X: 110, Y: 30 End Point
+Point X: 120, Y: 0 End Point
+Point X: 100, Y: 0 End Point
+End Ring
+End Polygon
+
+Polygon
+name: "Output_Polygon4"
+Ring
+Point X: 120, Y: 0 End Point
+Point X: 130, Y: 50 End Point
+Point X: 150, Y: 40 End Point
+Point X: 150, Y: 0 End Point
+Point X: 120, Y: 0 End Point
+End Ring
+End Polygon
+
+Polyline
+name: "Input_LineString"
+Point X: 100, Y: 5 End Point
+Point X: 110, Y: 30 End Point
+Point X: 120, Y: 0 End Point
+Point X: 130, Y: 50 End Point
+Point X: 150, Y: 40 End Point
+End Polyline
+

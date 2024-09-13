@@ -1,0 +1,45 @@
+File Polygon_LineString_Cut
+Units Meters
+
+Polygon
+Ring
+Point X: 100, Y: 0 End Point
+Point X: 150, Y: 0 End Point
+Point X: 150, Y: 50 End Point
+Point X: 100, Y: 50 End Point
+Point X: 100, Y: 0 End Point
+End Ring
+	name: "Input Polygon"
+End Polygon
+
+Polygon
+Ring
+Point X: 100, Y: 5 End Point
+Point X: 100, Y: 50 End Point
+Point X: 150, Y: 50 End Point
+Point X: 150, Y: 40 End Point
+Point X: 110, Y: 30 End Point
+Point X: 100, Y: 5 End Point
+End Ring
+	name: "Output Polygon"
+End Polygon
+
+Polygon
+Ring
+Point X: 100, Y: 0 End Point
+Point X: 100, Y: 5 End Point
+Point X: 110, Y: 30 End Point
+Point X: 150, Y: 40 End Point
+Point X: 150, Y: 0 End Point
+Point X: 100, Y: 0 End Point
+End Ring
+	name: "Output Polygon"
+End Polygon
+
+Polyline
+Point X: 100, Y: 5 End Point
+Point X: 110, Y: 30 End Point
+Point X: 150, Y: 40 End Point
+	name: "Input LineString"
+End Polyline
+

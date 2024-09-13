@@ -1,0 +1,73 @@
+{
+	"type": "FeatureCollection",
+	"crs": {
+		"type": "name",
+		"properties": {
+			"name": "EPSG:3857"
+		}
+	},
+	"features": [
+		{
+			"type": "Feature",
+			"id": "Input",
+			"geometry": {
+				"type": "Polygon",
+				"coordinates": [
+					[
+						[ 100, 0 ],
+						[ 150, 0 ],
+						[ 150, 50 ],
+						[ 100, 50 ],
+						[ 100, 0 ]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": "Output",
+			"geometry": {
+				"type": "Polygon",
+				"coordinates": [
+					[
+						[ 100, 5 ],
+						[ 100, 50 ],
+						[ 150, 50 ],
+						[ 150, 40 ],
+						[ 110, 30 ],
+						[ 100, 5 ]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": "Output",
+			"geometry": {
+				"type": "Polygon",
+				"coordinates": [
+					[
+						[ 100, 0 ],
+						[ 100, 5 ],
+						[ 110, 30 ],
+						[ 150, 40 ],
+						[ 150, 0 ],
+						[ 100, 0 ]
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"id": "Input",
+			"geometry": {
+				"type": "LineString",
+				"coordinates": [
+					[ 100, 5 ],
+					[ 110, 30 ],
+					[ 150, 40 ]
+				]
+			}
+		}
+	]
+}
