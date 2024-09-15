@@ -49,6 +49,8 @@
 			this.mapStatus1 = new MiniMap.MapStatusStrip();
 			this.scaleToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.lblTime3 = new System.Windows.Forms.Label();
+			this.btnBenc3 = new System.Windows.Forms.Button();
 			this.lblTime2 = new System.Windows.Forms.Label();
 			this.btnBenc2 = new System.Windows.Forms.Button();
 			this.lblTime1 = new System.Windows.Forms.Label();
@@ -56,11 +58,13 @@
 			this.btnReverse = new System.Windows.Forms.Button();
 			this.btnRemove = new System.Windows.Forms.Button();
 			this.btnClaasify = new System.Windows.Forms.Button();
-			this.lblTime3 = new System.Windows.Forms.Label();
-			this.btnBenc3 = new System.Windows.Forms.Button();
+			this.label1 = new System.Windows.Forms.Label();
+			this.methodUpDown1 = new System.Windows.Forms.NumericUpDown();
+			this.labelCnt = new System.Windows.Forms.Label();
 			this.menuStrip1.SuspendLayout();
 			this.mapStatus1.SuspendLayout();
 			this.panel1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.methodUpDown1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// menuStrip1
@@ -219,6 +223,9 @@
 			// 
 			// panel1
 			// 
+			this.panel1.Controls.Add(this.labelCnt);
+			this.panel1.Controls.Add(this.methodUpDown1);
+			this.panel1.Controls.Add(this.label1);
 			this.panel1.Controls.Add(this.lblTime3);
 			this.panel1.Controls.Add(this.btnBenc3);
 			this.panel1.Controls.Add(this.lblTime2);
@@ -234,10 +241,30 @@
 			this.panel1.Size = new System.Drawing.Size(155, 534);
 			this.panel1.TabIndex = 4;
 			// 
+			// lblTime3
+			// 
+			this.lblTime3.AutoSize = true;
+			this.lblTime3.Location = new System.Drawing.Point(18, 426);
+			this.lblTime3.Name = "lblTime3";
+			this.lblTime3.Size = new System.Drawing.Size(70, 13);
+			this.lblTime3.TabIndex = 8;
+			this.lblTime3.Text = "Elapsed time:";
+			// 
+			// btnBenc3
+			// 
+			this.btnBenc3.Enabled = false;
+			this.btnBenc3.Location = new System.Drawing.Point(18, 389);
+			this.btnBenc3.Name = "btnBenc3";
+			this.btnBenc3.Size = new System.Drawing.Size(75, 23);
+			this.btnBenc3.TabIndex = 7;
+			this.btnBenc3.Text = "Benchmark3";
+			this.btnBenc3.UseVisualStyleBackColor = true;
+			this.btnBenc3.Click += new System.EventHandler(this.btnBenc3_Click);
+			// 
 			// lblTime2
 			// 
 			this.lblTime2.AutoSize = true;
-			this.lblTime2.Location = new System.Drawing.Point(15, 287);
+			this.lblTime2.Location = new System.Drawing.Point(15, 353);
 			this.lblTime2.Name = "lblTime2";
 			this.lblTime2.Size = new System.Drawing.Size(70, 13);
 			this.lblTime2.TabIndex = 6;
@@ -246,7 +273,7 @@
 			// btnBenc2
 			// 
 			this.btnBenc2.Enabled = false;
-			this.btnBenc2.Location = new System.Drawing.Point(15, 250);
+			this.btnBenc2.Location = new System.Drawing.Point(15, 316);
 			this.btnBenc2.Name = "btnBenc2";
 			this.btnBenc2.Size = new System.Drawing.Size(75, 23);
 			this.btnBenc2.TabIndex = 5;
@@ -257,7 +284,7 @@
 			// lblTime1
 			// 
 			this.lblTime1.AutoSize = true;
-			this.lblTime1.Location = new System.Drawing.Point(12, 210);
+			this.lblTime1.Location = new System.Drawing.Point(12, 276);
 			this.lblTime1.Name = "lblTime1";
 			this.lblTime1.Size = new System.Drawing.Size(70, 13);
 			this.lblTime1.TabIndex = 4;
@@ -266,7 +293,7 @@
 			// btnBenc1
 			// 
 			this.btnBenc1.Enabled = false;
-			this.btnBenc1.Location = new System.Drawing.Point(12, 173);
+			this.btnBenc1.Location = new System.Drawing.Point(12, 239);
 			this.btnBenc1.Name = "btnBenc1";
 			this.btnBenc1.Size = new System.Drawing.Size(75, 23);
 			this.btnBenc1.TabIndex = 3;
@@ -276,7 +303,7 @@
 			// 
 			// btnReverse
 			// 
-			this.btnReverse.Location = new System.Drawing.Point(12, 118);
+			this.btnReverse.Location = new System.Drawing.Point(12, 184);
 			this.btnReverse.Name = "btnReverse";
 			this.btnReverse.Size = new System.Drawing.Size(75, 23);
 			this.btnReverse.TabIndex = 2;
@@ -287,7 +314,7 @@
 			// btnRemove
 			// 
 			this.btnRemove.Enabled = false;
-			this.btnRemove.Location = new System.Drawing.Point(12, 69);
+			this.btnRemove.Location = new System.Drawing.Point(12, 135);
 			this.btnRemove.Name = "btnRemove";
 			this.btnRemove.Size = new System.Drawing.Size(75, 23);
 			this.btnRemove.TabIndex = 1;
@@ -298,7 +325,7 @@
 			// btnClaasify
 			// 
 			this.btnClaasify.Enabled = false;
-			this.btnClaasify.Location = new System.Drawing.Point(12, 24);
+			this.btnClaasify.Location = new System.Drawing.Point(12, 90);
 			this.btnClaasify.Name = "btnClaasify";
 			this.btnClaasify.Size = new System.Drawing.Size(75, 23);
 			this.btnClaasify.TabIndex = 0;
@@ -306,25 +333,45 @@
 			this.btnClaasify.UseVisualStyleBackColor = true;
 			this.btnClaasify.Click += new System.EventHandler(this.btnClaasify_Click);
 			// 
-			// lblTime3
+			// label1
 			// 
-			this.lblTime3.AutoSize = true;
-			this.lblTime3.Location = new System.Drawing.Point(18, 360);
-			this.lblTime3.Name = "lblTime3";
-			this.lblTime3.Size = new System.Drawing.Size(70, 13);
-			this.lblTime3.TabIndex = 8;
-			this.lblTime3.Text = "Elapsed time:";
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(12, 21);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(52, 13);
+			this.label1.TabIndex = 9;
+			this.label1.Text = "Mehthod:";
 			// 
-			// btnBenc3
+			// methodUpDown1
 			// 
-			this.btnBenc3.Enabled = false;
-			this.btnBenc3.Location = new System.Drawing.Point(18, 323);
-			this.btnBenc3.Name = "btnBenc3";
-			this.btnBenc3.Size = new System.Drawing.Size(75, 23);
-			this.btnBenc3.TabIndex = 7;
-			this.btnBenc3.Text = "Benchmark3";
-			this.btnBenc3.UseVisualStyleBackColor = true;
-			this.btnBenc3.Click += new System.EventHandler(this.btnBenc3_Click);
+			this.methodUpDown1.Location = new System.Drawing.Point(79, 19);
+			this.methodUpDown1.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+			this.methodUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+			this.methodUpDown1.Name = "methodUpDown1";
+			this.methodUpDown1.Size = new System.Drawing.Size(49, 20);
+			this.methodUpDown1.TabIndex = 10;
+			this.methodUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+			// 
+			// labelCnt
+			// 
+			this.labelCnt.AutoSize = true;
+			this.labelCnt.Location = new System.Drawing.Point(18, 56);
+			this.labelCnt.Name = "labelCnt";
+			this.labelCnt.Size = new System.Drawing.Size(13, 13);
+			this.labelCnt.TabIndex = 11;
+			this.labelCnt.Text = "0";
 			// 
 			// MainForm
 			// 
@@ -345,6 +392,7 @@
 			this.mapStatus1.PerformLayout();
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.methodUpDown1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -381,6 +429,9 @@
 		private System.Windows.Forms.Button btnBenc2;
 		private System.Windows.Forms.Label lblTime3;
 		private System.Windows.Forms.Button btnBenc3;
+		private System.Windows.Forms.NumericUpDown methodUpDown1;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label labelCnt;
 	}
 }
 

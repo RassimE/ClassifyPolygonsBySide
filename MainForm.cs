@@ -251,10 +251,21 @@ namespace TestApp
 			double xOrigin = 0.5 * (envelope.ptMin.X + envelope.ptMax.X);
 			double yOrigin = 0.5 * (envelope.ptMin.Y + envelope.ptMax.Y);
 
-			//DeterminateSide.СlassifyBySide(polygons.Cast<GeometryBase>().ToList(), lineStrings[0], xOrigin, yOrigin, out left, out right);
-			//DetermineSide.СlassifyBySide(polygons.Cast<GeometryBase>().ToList(), lineStrings[0], xOrigin, yOrigin, out left, out right);
-
-			СlassifyPolygonsBySide.СlassifyBySide(polygons.Cast<GeometryBase>().ToList(), lineStrings[0], xOrigin, yOrigin, out left, out right);
+			switch(methodUpDown1.Value)
+			{
+				case 1:
+					DetermineSideByBinarySearch.СlassifyBySide(polygons.Cast<GeometryBase>().ToList(), lineStrings[0], xOrigin, yOrigin, out left, out right);
+					labelCnt.Text = DetermineSideByBinarySearch.cnt.ToString();
+					break;
+				case 2:
+					DetermineSideByBinarySearch2.СlassifyBySide(polygons.Cast<GeometryBase>().ToList(), lineStrings[0], xOrigin, yOrigin, out left, out right);
+					labelCnt.Text = DetermineSideByBinarySearch2.cnt.ToString();
+					break;
+				case 3:
+					DetermineSideByCombinedSearch.СlassifyBySide(polygons.Cast<GeometryBase>().ToList(), lineStrings[0], xOrigin, yOrigin, out left, out right);
+					labelCnt.Text = "-";
+					break;
+			}
 
 			Style style = new Style();
 
@@ -308,7 +319,9 @@ namespace TestApp
 			Stopwatch st = new Stopwatch();
 			st.Start();
 			for (int i = 0; i < n; i++)
-				DeterminateSide.СlassifyBySide(polygons.Cast<GeometryBase>().ToList(), lineStrings[0], xOrigin, yOrigin, out left, out right);
+				DetermineSideByBinarySearch.СlassifyBySide(polygons.Cast<GeometryBase>().ToList(), lineStrings[0], xOrigin, yOrigin, out left, out right);
+			//DetermineSideByLinearSearch.СlassifyBySide(polygons.Cast<GeometryBase>().ToList(), lineStrings[0], xOrigin, yOrigin, out left, out right);
+
 			st.Stop();
 
 			lblTime1.Text = string.Format("Elapsed time: {0}", st.ElapsedMilliseconds / (double)n);
@@ -325,7 +338,7 @@ namespace TestApp
 			Stopwatch st = new Stopwatch();
 			st.Start();
 			for (int i = 0; i < n; i++)
-				DetermineSide.СlassifyBySide(polygons.Cast<GeometryBase>().ToList(), lineStrings[0], xOrigin, yOrigin, out left, out right);
+				DetermineSideByBinarySearch2.СlassifyBySide(polygons.Cast<GeometryBase>().ToList(), lineStrings[0], xOrigin, yOrigin, out left, out right);
 			st.Stop();
 
 			lblTime2.Text = string.Format("Elapsed time: {0}", st.ElapsedMilliseconds / (double)n);
@@ -342,7 +355,7 @@ namespace TestApp
 			Stopwatch st = new Stopwatch();
 			st.Start();
 			for (int i = 0; i < n; i++)
-				СlassifyPolygonsBySide.СlassifyBySide(polygons.Cast<GeometryBase>().ToList(), lineStrings[0], xOrigin, yOrigin, out left, out right);
+				DetermineSideByCombinedSearch.СlassifyBySide(polygons.Cast<GeometryBase>().ToList(), lineStrings[0], xOrigin, yOrigin, out left, out right);
 			st.Stop();
 
 			lblTime3.Text = string.Format("Elapsed time: {0}", st.ElapsedMilliseconds / (double)n);
