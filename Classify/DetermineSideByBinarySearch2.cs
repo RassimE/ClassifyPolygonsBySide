@@ -137,29 +137,28 @@ namespace CutOperatorTest
                     if (currEdge.D < dMin || currEdge.D > dMax)
                         continue;
 
+					double dcurrMin = currEdge.D - epsilonD;
+					double dcurrMax = currEdge.D + epsilonD;
+
 					int downIndex = 0;
 					int upIndex = segmentStats.Length - 1;
 					int midIndex = 0;
-					bool found = false;
 
-					while (downIndex <= upIndex)
-					{
-						cnt++;
-						// Start in the middle if the number of elements is 8 or less
-						midIndex = (downIndex + upIndex) >> 1;
+                    while (downIndex <= upIndex)
+                    {
+                        cnt++;
+                        // Start in the middle if the number of elements is 8 or less
+                        midIndex = (downIndex + upIndex) >> 1;
 
-						if (currEdge.D - segmentStats[midIndex].D > epsilonD)
-							downIndex = midIndex + 1;
-						else if (segmentStats[midIndex].D - currEdge.D > epsilonD)
-							upIndex = midIndex - 1;
-						else
-						{
-							found = true;
-							break;
-						}
-					}
+                        if (segmentStats[midIndex].D < dcurrMin)
+                            downIndex = midIndex + 1;
+                        else if (segmentStats[midIndex].D > dcurrMax)
+                            upIndex = midIndex - 1;
+                        else
+                            break;
+                    }
 
-					if (!found)
+                    if (downIndex > upIndex)
                         continue;
 
                     downIndex = midIndex;
